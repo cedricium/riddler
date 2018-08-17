@@ -308,16 +308,12 @@
     "answer": "A shirt (or sweater, jacket etc)"
   },
   {
-    "riddle": "I live in water\nIf you cut my head I’m at your door,\nIf you cut my tail I’m fruit,\nIf you cut both I’m with you\nWhat am I?\nA pearl. They’re found underwater. Removing the head (p) leaves Earl, a guy who could be at your door. Removing the tail (l) leaves pear, a fruit and if you cut both off you’re left with ear, which is with you because it’s attached to your head.",
-    "answer": "A pearl. They’re found underwater. Removing the head (p) leaves Earl, a guy who could be at your door. Removing the tail (l) leaves pear, a fruit and if you cut both off you’re left with ear, which is with you because it’s attached to your head."
-  },
-  {
     "riddle": "Feed me and I live, give me drink and I die. What am I?",
     "answer": "Fire."
   },
   {
     "riddle": "What begins and has no end? What is the ending of all that begins?",
-    "answer": "The best answer I’ve heard is death. It ends all that begins, and there’s no end to death. Another answer along the same lines is decay."
+    "answer": "Death"
   },
   {
     "riddle": "A man went to the hardware store to buy items for his house.\n1 would cost $.25\n12 would cost $.50\n122 would cost $.75\nWhen he left the store he had spent $.75, what did he buy?",
@@ -564,14 +560,6 @@
     "answer": "The moon"
   },
   {
-    "riddle": "With potent, flowery words speak I,\nOf something common, vulgar, dry;\nI weave webs of pedantic prose,\nIn effort to befuddle those,\nWho think I wile time away,\nIn lofty things, above all day\nThe common kind that linger where\nMonadic beings live and fare;\nPractical I may not be,\nBut life, it seems, is full of me!",
-    "answer": "\nBut life, it seems, is full of me!"
-  },
-  {
-    "riddle": "A Riddle",
-    "answer": "A Riddle"
-  },
-  {
     "riddle": "A box without hinges, key or lid,\nYet golden treasure inside is hid.",
     "answer": "Egg"
   },
@@ -744,7 +732,7 @@
     "answer": "In the mind"
   },
   {
-    "riddle": "I give you a group of three.\nOne is sitting down, and never will get up.\nThe second eats as much as is given him,\nyet is always hungry.\nThe third goes away and never returns.\nStove, fire, and smoke",
+    "riddle": "I give you a group of three.\nOne is sitting down, and never will get up.\nThe second eats as much as is given him,\nyet is always hungry.\nThe third goes away and never returns.",
     "answer": "\nStove, fire, and smoke"
   },
   {
@@ -964,7 +952,7 @@
     "answer": "Your wife"
   },
   {
-    "riddle": "What work is it that the faster you work,\nthe longer it is before you’re done,\nand the slower you work,\nthe sooner you’re finished?\n    Roasting meat on a spit",
+    "riddle": "What work is it that the faster you work,\nthe longer it is before you’re done,\nand the slower you work,\nthe sooner you’re finished?",
     "answer": "Roasting meat on a spit"
   },
   {
