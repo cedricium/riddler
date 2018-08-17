@@ -18,9 +18,9 @@ const port = PORT || 80;
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
-let currentRequest = {};
-
-function createRiddleResponse(riddle) {
+function createRiddleResponse() {
+  const index = Math.floor(Math.random() * RIDDLES.length);
+  const {riddle, answer} = RIDDLES[index];
   return {
     "attachments": [
       {
@@ -29,7 +29,7 @@ function createRiddleResponse(riddle) {
       },
       {
         "fallback": "Would you recommend it to customers?",
-        "callback_id": "comic_1234_xyz",
+        "callback_id": index,
         "color": "#045DE9",
         "attachment_type": "default",
         "actions": [
@@ -70,25 +70,24 @@ app.post('/', (req, res) => {
       replyToSlashCommand(req.body.response_url, {text: `I don't know how to help you...`});
       break;
     default:
-      const {riddle, answer} = sample(RIDDLES);
-      const riddleResponse = createRiddleResponse(riddle);
-      currentRequest['riddle'] = riddle;
-      currentRequest['answer'] = answer;
+      const riddleResponse = createRiddleResponse();
       replyToSlashCommand(req.body.response_url, riddleResponse);
       break;
   }
 });
 
 app.post('/answer', (req, res) => {
+  const actionPayload = JSON.parse(req.body.payload);
+  const {riddle, answer} = RIDDLES[actionPayload.callback_id];
   res.json({
     "replace_original": true,
     "attachments": [
       {
-        "text": `${currentRequest.riddle}`,
+        "text": `${riddle}`,
         "color": "#045DE9"
       },
       {
-        "text": `*Answer:* _${currentRequest.answer}_`,
+        "text": `*Answer:* _${answer}_`,
         "color": "#045DE9"
       }
     ]
