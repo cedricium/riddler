@@ -1,10 +1,11 @@
 {
   "name": "riddler",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "I am a bot of few words, but many riddles.",
   "main": "src/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/server.js"
   },
   "author": "Cedric Amaya <amaya.cedric@gmail.com> (https://cedric.tech/)",
   "license": "MIT",
