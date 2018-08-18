@@ -2,8 +2,9 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const responseHandler = require('./response-handler');
+const validateSlackRequest = require('validate-slack-request');
 
-const {SLACK_TOKEN: slackToken, PORT} = process.env;
+const {SIGNING_SECRET, PORT} = process.env;
 
 // if (!slackToken || !apiKey) {
 //   console.error('missing environment variables SLACK_TOKEN and/or REBRANDLY_APIKEY');
@@ -17,7 +18,9 @@ app.use(bodyParser.json());
 
 app.post(['/', '/answer'], (req, res) => {
   res.status(200).end();
-  responseHandler(req.body);
+  if (validateSlackRequest(SIGNING_SECRET, req)) {
+    responseHandler(req.body);
+  }
 });
 
 app.listen(port, () => {
