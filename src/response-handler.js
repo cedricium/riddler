@@ -1,12 +1,14 @@
 const request = require('request');
 const RIDDLES = require('./res/riddles.json');
+const pkg = require('../package.json');
 
 const ATTACHMENT_COLOR = '#045DE9';
 
-createHelpResponse = () => {
+const createHelpResponse = () => {
   let helpMessage = '*riddler:* _I am a bot of few words, but many riddles._\n\n';
   helpMessage += '*Usage:* `/riddler [<command>]`\n*Commands:*\n'
-  helpMessage += '    help              displays this help message';
+  helpMessage += '    help              displays this help message\n';
+  helpMessage += '    version         prints the latest version of riddler';
   return {
     "attachments": [{
       "text": helpMessage,
@@ -14,6 +16,16 @@ createHelpResponse = () => {
     }]
   };
 }
+
+const createVersionResponse = () => {
+  const versionMessage = `*${pkg.name}*/v${pkg.version}`;
+  return {
+    "attachments": [{
+      "text": versionMessage,
+      "color": ATTACHMENT_COLOR
+    }]
+  }
+};
 
 const createActionResponse = (payload) => {
   const {riddle, answer} = RIDDLES[payload.callback_id];
@@ -68,8 +80,19 @@ const requestHandler = (body) => {
   let response = {};
   let responseUrl = body.response_url;
 
-  if (body.text === 'help') {
-    response = createHelpResponse();
+  if (Object.keys(body).indexOf('text') !== -1 && body.text !== '') {
+    switch (body.text) {
+      case 'help':
+        response = createHelpResponse();
+        break;
+      case 'version':
+        response = createVersionResponse();
+        break;
+      default:
+        // value of text is not recognized; just send a riddle
+        response = createInitialResponse();
+        break;
+    }
   } else {
     if (body.payload) {
       const actionPayload = JSON.parse(body.payload);

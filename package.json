@@ -1,6 +1,6 @@
 {
   "name": "riddler",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "I am a bot of few words, but many riddles.",
   "main": "src/server.js",
   "scripts": {
