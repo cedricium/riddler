@@ -3,12 +3,25 @@ const RIDDLES = require('./res/riddles.json');
 const pkg = require('../package.json');
 
 const ATTACHMENT_COLOR = '#045DE9';
+const FEEDBACK_URL = 'https://goo.gl/forms/t3qBVP5ngxt6O4GK2';
+
+const createFeedbackResponse = () => {
+  let feedbackMessage = `Visit this link to give your feedback: ${FEEDBACK_URL}\n`
+  feedbackMessage += `Be honest, I won't bite :wink:`;
+  return {
+    "attachments": [{
+      "text": feedbackMessage,
+      "color": ATTACHMENT_COLOR
+    }]
+  };
+}
 
 const createHelpResponse = () => {
   let helpMessage = '*riddler:* _I am a bot of few words, but many riddles._\n\n';
   helpMessage += '*Usage:* `/riddler [<command>]`\n*Commands:*\n'
   helpMessage += '    help              displays this help message\n';
-  helpMessage += '    version         prints the latest version of riddler';
+  helpMessage += '    version         displays the latest version of riddler\n';
+  helpMessage += '    feedback      displays a link to the feedback form\n';
   return {
     "attachments": [{
       "text": helpMessage,
@@ -82,6 +95,9 @@ const requestHandler = (body) => {
 
   if (Object.keys(body).indexOf('text') !== -1 && body.text !== '') {
     switch (body.text) {
+      case 'feedback':
+        response = createFeedbackResponse();
+        break;
       case 'help':
         response = createHelpResponse();
         break;
