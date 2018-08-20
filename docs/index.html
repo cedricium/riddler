@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>riddler, for Slack | The Best Riddles, Only a Slash Command Away</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" media="screen" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
+  <link rel="stylesheet" type="text/css" media="screen" href="./css/main.css" />
+</head>
+<body>
+  <section class="hero is-fullheight">
+    <div class="hero-head">
+      <nav>
+        <div class="container">
+          <div class="navbar-brand">
+            <a class="navbar-item">
+              <img src="./res/logo.png" alt="Logo">
+            </a>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-variable is-4">
+          <div class="column is-6">
+            <h1 class="title is-1 has-text-white has-text-weight-bold">Tease your brain with Riddler</h1>
+            <h2 class="subtitle is-2 has-text-white">The best riddles, only a slash command away</h2>
+            <a href="https://slack.com/oauth/authorize?scope=commands&client_id=419464847798.417895979188">
+              <img alt="Add to Slack" height="80" width="278" src="https://platform.slack-edge.com/img/add_to_slack@2x.png" />
+            </a>
+          </div>
+          <div class="column is-6 has-content-vcentered">
+            <p class="help has-text-white has-text-weight-semibold">Hint: the answer is water 💦</p>
+            <figure class="image screenshot">
+              <img src="./res/riddler.png" alt="" />
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column is-4">
+          <div class="content">
+            <p>
+              <strong class="has-text-grey-dark">Riddler</strong> by <a href="https://cedric.tech" target="_blank">Cedric Amaya</a>.
+            </p>
+            <!-- twitter follow button -->
+            <a class="twitter-follow-button"
+              href="https://twitter.com/cedricamaya"
+              data-size="large">
+            Follow @CedricAmaya</a>
+            <p class="has-text-grey is-size-7">
+              Source code licensed <a href="">MIT</a><br />
+              Website content licensed <a href="">CC BY-NC-SA 4.0</a>
+            </p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="content">
+            <p>
+              <strong class="has-text-grey-dark">Contribute</strong> on GitHub
+            </p>
+            <a class="github-button" href="https://github.com/cedricium/riddler"
+              data-size="large" data-show-count="true"
+              aria-label="Star cedricium/riddler on GitHub">Star
+            </a>
+            <a class="github-button" href="https://github.com/cedricium"
+              data-size="large" aria-label="Follow @cedricium on GitHub">
+                Follow @cedricium
+            </a>
+            <p class="has-text-grey is-size-7">
+              Found a bug? Create an issue on <a href="">GitHub</a>.<br />
+              Have a suggestion or feature request? <a href="">Let us know</a>!
+            </p>
+          </div>
+        </div>
+        <div class="column is-4">
+          <div class="content">
+            <p>
+              <strong>Copyleft</strong> 2018<br />
+            </p>
+            <!--
+              TODO: create TOS and Privacy pages once riddler is live
+              <p class="has-text-grey is-size-7">
+                <a href="">Terms of Service</a><br />
+                <a href="">Privacy Policy</a><br />
+              </p>
+            -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script async defer src="https://buttons.github.io/buttons.js"></script>
+  <script>window.twttr = (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0],
+      t = window.twttr || {};
+    if (d.getElementById(id)) return t;
+    js = d.createElement(s);
+    js.id = id;
+    js.src = "https://platform.twitter.com/widgets.js";
+    fjs.parentNode.insertBefore(js, fjs);
+    t._e = [];
+    t.ready = function(f) {
+      t._e.push(f);
+    };
+    return t;
+    }(document, "script", "twitter-wjs"));
+  </script>
+</body>
+</html>
