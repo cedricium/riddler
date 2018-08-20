@@ -31,7 +31,7 @@ const createHelpResponse = () => {
 }
 
 const createVersionResponse = () => {
-  const versionMessage = `*${pkg.name}*/v${pkg.version}`;
+  const versionMessage = `*${pkg.name}*@v${pkg.version}`;
   return {
     "attachments": [{
       "text": versionMessage,
