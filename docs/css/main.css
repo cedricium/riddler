@@ -2,6 +2,10 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
 }
 
+nav.nav {
+  background: #0053e6 !important;
+}
+
 .hero.is-fullheight {
   background-image: url('data:image/svg+xml;charset=utf8,%3Csvg xmlns="http://www.w3.org/2000/svg" width="1440" height="661.1" viewBox="0 0 1440 661.1"%3E%3Cstyle type="text/css"%3Ecircle, ellipse, line, path, polygon, polyline, rect, text %7B fill: %230053e6 !important; %7D%3C/style%3E%3Cpath fill="%230053e6" d="M1440 488c-19.3 4.3-39.2 8.6-60 13-174.2 36.5-228.8 288-467 76.2-153.6-136.6-424-22.8-660.4-5.8-130.2 9.3-252.6-75-252.6-75V0h1440"/%3E%3C/svg%3E');
   background-size: cover;
@@ -22,6 +26,6 @@ div.column.has-content-vcentered .help {
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.25);
 }
 
-.hero-foot footer.footer {
-  background-color: transparent;
+.button.twitter {
+  margin-bottom: 0.437rem;
 }
