@@ -74,3 +74,6 @@ typings/
 
 # Mac-specific
 .DS_Store
+
+# for scraper...
+data
